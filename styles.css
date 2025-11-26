@@ -1,0 +1,357 @@
+/* CSS Reset - Remove browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   /* Base styles for the entire page */
+   body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #ffffff;
+   }
+   
+   /* Make images responsive by default */
+   img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+   }
+   
+   /* Remove default list styles */
+   ul, ol {
+    list-style: none;
+   }
+   
+   /* Remove default link underline */
+   a {
+    text-decoration: none;
+    color: inherit;
+   }
+ /* Update headings to use color variables */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.875rem;
+    color: var(--color-text-primary);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+}
+   /* Text emphasis */
+   strong {
+    font-weight: 700;
+    color: #1a1a1a;
+   }
+   
+   em {
+    font-style: italic;
+    color: #F5F527;
+   }
+   /* CSS Variables for Color System */
+:root {
+ /* Primary colors */
+ --color-primary: #3b82f6;
+ --color-primary-dark: #2563eb;
+ --color-primary-light: #60a5fa;
+ 
+ /* Neutral colors */
+ --color-neutral-100: #f5f5f5;
+ --color-neutral-200: #e5e5e5;
+ --color-neutral-300: #d4d4d4;
+ --color-neutral-700: #404040;
+ --color-neutral-800: #262626;
+ --color-neutral-900: #171717;
+ 
+ /* Semantic colors */
+ --color-success: #22c55e;
+ --color-warning: #f59e0b;
+ --color-error: #ef4444;
+ 
+ /* Text colors */
+ --color-text-primary: #1a1a1a;
+ --color-text-secondary: #4a4a4a;
+ --color-text-muted: #737373;
+ 
+ /* Background colors */
+ --color-bg-primary: #ffffff;
+ --color-bg-secondary: #f5f5f5;
+ --color-bg-tertiary: #e5e5e5;
+}
+
+/* Update body to use variables */
+body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+ font-size: 16px;
+ line-height: 1.6;
+ color: var(--color-text-primary);
+ background-color: var(--color-bg-primary);
+}
+/* Container System */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Smaller container for reading content */
+.container-narrow {
+    max-width: 800px;
+}
+/* Section Spacing */
+section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* First section less top padding */
+section:first-of-type {
+    padding-top: 2rem;
+}
+
+/* Alternate background colors */
+section:nth-child(even) {
+    background-color: var(--color-bg-secondary);
+}
+/* Card Component */
+.card {
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+   }
+   
+   /* Card hover effect */
+   .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+   }
+   
+   /* Card title */
+   .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+   }
+   
+   /* Card description */
+   .card-description {
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+   }
+   
+   /* Card footer */
+   .card-footer {
+    border-top: 1px solid var(--color-neutral-200);
+    padding-top: 1rem;
+    margin-top: 1rem;
+   }
+   /* Base Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+   }
+   
+   /* Primary Button */
+   .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+   }
+   
+   .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+   }
+   
+   .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+   }
+   
+   /* Secondary Button (Outline) */
+   .btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+   }
+   
+   .btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
+   }
+   
+   /* Small Button Size */
+   .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+   }
+   
+   /* Large Button Size */
+   .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+   }
+   /* Navigation Bar */
+header {
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-neutral-200);
+    padding: 1rem 0;
+   }
+   
+   nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   
+   /* Logo/Brand */
+   .nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+   }
+   
+   /* Navigation Links */
+   .nav-links {
+    display: flex;
+    gap: 2rem;
+   }
+   
+   .nav-links a {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+   }
+   
+   .nav-links a:hover {
+    color: var(--color-primary);
+   }
+   
+   /* Active link */
+   .nav-links a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+   }
+   /* Profile Image */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-primary);
+    margin: 0 auto 1.5rem;
+    display: block;
+}
+
+/* Alternative: Rounded Rectangle */
+.profile-image-square {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Project Images */
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1rem;
+}
+
+/* Image Card Combination */
+.card-with-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-with-image .card-body {
+    padding: 1.5rem;
+}
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+   }
+   
+   /* Labels */
+   label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+   }
+   
+   /* Text Inputs และ Textarea */
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"],
+   textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid var(--color-neutral-300);
+    border-radius: 6px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+   }
+   
+   /* Focus State */
+   input:focus,
+   textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+   }
+   
+   /* Textarea specific */
+   textarea {
+    resize: vertical;
+    min-height: 120px;
+   }
+   
+   /* Placeholder */
+   input::placeholder,
+   textarea::placeholder {
+    color: var(--color-text-muted);
+   }

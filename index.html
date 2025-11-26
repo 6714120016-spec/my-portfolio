@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My Portfolio</title>
+ <!-- Link to CSS file -->
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>I am a web developer specializing in modern technologies.</p>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-brand">My Portfolio</div>
+                <ul class="nav-links">
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     
-    <!-- About section -->
-    <section id="about">
-        <h2>About Me 2</h2>
-        <p>I am a passionate web developer learning modern technologies.</p>
-    </section>
-</body>
+    <main class="container">
+        <section id="about">
+            <img src="face.jpeg" alt="My profile photo" class="profile-image">
+            <h2>About Me</h2>
+            <p>my name is theelapas noyphungboon i graduate from mahanakorn university cybersecurity i have a special talent for playing game</p>
+           </section>
+        
+        <section id="projects">
+            <h2>future gamming chair</h2>
+            
+            <div class="card">
+                <h3 class="card-title">future chair</h3>
+                <p class="card-description">
+                    this project is about gamming chair but with the upgrade version 
+                </p>
+                <div class="card card-with-image">
+                    <img src="future.jpeg" alt="Project screenshot" class="project-image">
+                    <div class="card-body">
+                        <h3 class="card-title">future gamming chair</h3>
+                        <p class="card-description">this chair will change your gamming experience from a lot of feature of this chair for example ...</p>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">View Project</a>
+                    <a href="#" class="btn btn-secondary btn-sm">View Code</a>
+                </div>
+            </div>
+            
+            <!-- More cards... -->
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+    
+    
+    <footer class="container">
+    <!-- Your footer content -->
+    </footer>
+   </body>
 </html>
-
