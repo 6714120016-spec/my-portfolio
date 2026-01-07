@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabExam01 - Modern Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-shape"></div>
+
+<div class="app-container">
+    <header>
+        <h1>Searchable<span>Image Gallery</span></h1>
+        <p>ค้นหารูปภาพคุณภาพสูงจากทั่วทุกมุมโลก</p>
+    </header>
+
+    <div class="search-section">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="เช่น ทะเล, ท้องฟ้า, แมว...">
+            <button id="searchBtn">
+                <span class="icon">🔍</span> ค้นหา
+            </button>
+        </div>
+    </div>
+
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <main id="gallery" class="gallery-grid">
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
